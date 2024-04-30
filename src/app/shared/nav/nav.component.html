@@ -1,0 +1,38 @@
+<nav class="flex items-center justify-center h-16 bg-zinc-950/90 text-white backdrop-blur-sm fixed w-full z-50 ">
+    <div
+      class="flex sm:items-center justify-around text-white w-full max-w-6xl z-50 "
+    >
+      <div class="font-bold text-3xl">
+        <a href="#home">DevKuroi</a>
+      </div>
+      <app-hamburger></app-hamburger>
+      <div class="bg-zinc-950/90 md:bg-transparent w-1/2 h-svh md:h-auto md:w-auto absolute md:static top-full left-1/2 flex flex-col items-center md:flex-row lg:gap-16 md:gap-9 text-lg transition-transform translate-x-[200%] md:translate-x-0" id="container-options">
+        <a
+          href="#home"
+          aria-label="Home"
+          class="hover:text-indigo-600 transition-colors inline-flex items-center py-4 md:p-0 text-xl"
+          >Home</a
+        >
+        <a
+          href="#projects"
+          aria-label="Projects"
+          class="hover:text-indigo-600 transition-colors inline-flex items-center py-4 md:p-0 text-xl"
+          >Projects</a
+        >
+        <a
+          href="#skills"
+          aria-label="Skills"
+          class="hover:text-indigo-600 transition-colors inline-flex items-center py-4 md:p-0 text-xl"
+          >Skills</a
+        >
+        <a
+          href="#about"
+          aria-label="About"
+          class="hover:text-indigo-600 transition-colors inline-flex items-center py-4 md:p-0 text-xl"
+          >About</a
+        >
+        <app-contactme></app-contactme>        
+      </div>
+    </div>
+    <app-notification></app-notification>
+  </nav>
