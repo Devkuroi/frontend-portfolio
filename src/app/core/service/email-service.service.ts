@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class EmailServiceService {
 
-  
+  url = "https://devkuroi.up.railway.app";
 
   constructor() {
 
