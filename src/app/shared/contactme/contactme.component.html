@@ -1,19 +1,19 @@
 <section class="bg-zinc-950 flex flex-col items-center py-10" id="contact-me">
     <div class="text-white py-14 flex flex-col items-center">
-    <h1 class="text-left text-4xl font-extrabold mb-4">Contact me</h1>
+    <h1 clss="text-left text-4xl font-extrabold mb-4">Contact me</h1>
     
     <div class="w-1/2 text-2xl m-5 md:text-center">
       <p class="inline">If you like my work, you can contact me at my email </p>
       <p class="text-indigo-700 font-bold inline break-all md:break-keep">joan2000oviedo&#64;gmail.com</p>
       <p class="font-bold inline"> or you can use this form</p>
     </div>
-      <form action="/send-email" method="post" id="form" class="flex flex-col gap-3 text-left mt-7 text-xl items-center sm:items-stretch">
+      <form [formGroup]="contactForm" (submit)="submitForm" method="post" id="form" class="flex flex-col gap-3 text-left mt-7 text-xl items-center sm:items-stretch">
         <label for="name"><i class="fa-regular fa-user"></i> Name</label>
-        <input type="text" name="name" id="name" minlength="1" maxlength="230" autocomplete="off" required class="bg-zinc-950  rounded-xl h-10 border-solid border-white border-2 p-3 w-1/2 sm:w-auto">
+        <input formControlName="name" type="text" name="name" id="name" minlength="1" maxlength="230" autocomplete="off" required class="bg-zinc-950  rounded-xl h-10 border-solid border-white border-2 p-3 w-1/2 sm:w-auto">
         <label for="email"><i class="fa-regular fa-at"></i> Email</label>
-        <input type="email" name="email" id="email" minlength="6" maxlength="320" autocomplete="off" required class="bg-zinc-950 rounded-xl h-10 border-solid border-white border-2 p-3 w-1/2 sm:w-auto">
+        <input formControlName="email" type="email" name="email" id="email" minlength="6" maxlength="320" autocomplete="off" required class="bg-zinc-950 rounded-xl h-10 border-solid border-white border-2 p-3 w-1/2 sm:w-auto">
         <label for="message"> <i class="fa-regular fa-message"></i> Menssage</label>
-        <textarea id="message" name="message" minlength="6" maxlength="500" autocomplete="off" required class="bg-zinc-950 rounded-xl border-solid border-white border-2 p-3 resize-none w-2/4 h-48 sm:w-auto"></textarea>
+        <textarea formControlName="message" id="message" name="message" minlength="6" maxlength="500" autocomplete="off" required class="bg-zinc-950 rounded-xl border-solid border-white border-2 p-3 resize-none w-2/4 h-48 sm:w-auto"></textarea>
         <button type="submit" id="button-submit" class="bg-gradient-to-r from-blue-700 to-violet-700 w-52 self-center mt-4 rounded-lg"><i class="fa-regular fa-paper-plane"></i> Send</button>
       </form>
   </div>
